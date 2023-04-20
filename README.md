@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+// https://jsonplaceholder.typicode.com/users
+https://www.geeksforgeeks.org/how-to-fetch-data-from-an-api-in-reactjs/
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
