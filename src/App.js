@@ -15,8 +15,15 @@ class App extends React.Component {
 	// ComponentDidMount is used to
 	// execute the code
 	componentDidMount() {
+	
+	//	const requestOptions = {
+	//		method: 'GET',
+	//		headers: { 'Content-Type': 'application/json' },
+	//		body: JSON.stringify({ title: 'React POST Request Example' })
+	//	};	
+	
 		fetch(
-"https://data.tg.ch/api/v2/catalog/datasets/div-energie-11/exports/json")
+"https://data.tg.ch/api/v2/catalog/datasets/div-energie-11/exports/json") //, requestOptions )
 			.then((res) => res.json())
 			.then((json) => {
 				this.setState({
@@ -35,23 +42,22 @@ class App extends React.Component {
 			<h1> Fetch data from an api in react </h1> {
 				items.map((item) => (
 				<ol key = { item.id } >
-					<tr>
+		 <tr>
             <th>Jahr</th>
             <th>Erdgasheizungen</th>
             <th>Waermepumpen</th>
-          </tr>
+         </tr>
           <tr>
-          <td>
-            { item.jahr} 
-            </td>
             <td>
-            { item.erdgasfeuerungen } 
-            </td>
+              { item.jahr} 
+              </td>
+             <td>
+              { item.erdgasfeuerungen } 
+             </td>
             <td>
             { item.waermepumpen }
             </td>
           </tr>
-
 					</ol>
 				))
 			}
